@@ -1,0 +1,19 @@
+<div class="upload-container">
+    <h2>CARGAR VIDEO</h2>
+  
+    <div class="upload-box">
+      <label for="file-upload" class="upload-label">
+        <img src="assets/upload-icon.svg" alt="Upload Icon" />
+        <p>Da clic aquí para subir tu video</p>
+        <input type="file" id="file-upload" (change)="onFileSelected($event)" accept=".mp4" hidden>
+      </label>
+  
+      <p *ngIf="fileName">Nombre del archivo: {{ fileName }}</p>
+  
+      <div class="button-group">
+        <button class="cancel-button" (click)="cancel()">Cancelar</button>
+        <button class="upload-button" [disabled]="!file" (click)="upload()">Subir</button>
+      </div>
+    </div>
+  </div>
+  
