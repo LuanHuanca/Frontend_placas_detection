@@ -1,0 +1,13 @@
+<h2>Placas Detectadas</h2>
+<table>
+  <tr>
+    <th>Placa</th>
+    <th>Hora</th>
+    <th>Imagen</th>
+  </tr>
+  <tr *ngFor="let det of detecciones">
+    <td>{{ det.placa }}</td>
+    <td>{{ det.hora | date:'shortTime' }}</td>
+    <td><img [src]="'/assets/' + det.imagen" width="100" /></td>
+  </tr>
+</table>
