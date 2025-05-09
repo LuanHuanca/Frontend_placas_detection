@@ -1,10 +1,12 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { NavbarComponent } from '../../components/navbar/navbar.component';
+import { FooterComponent } from '../../components/footer/footer.component';
 
 @Component({
   selector: 'app-cargar-video',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, NavbarComponent, FooterComponent],
   templateUrl: './cargar-video.component.html',
   styleUrls: ['./cargar-video.component.css']
 })

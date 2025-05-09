@@ -4,6 +4,10 @@
     min-height: 100vh;
     font-family: "Segoe UI", sans-serif;
   }
+
+  h1 {
+    justify-content: center;
+  }
   
   .header {
     background-color: #2e5b75;
