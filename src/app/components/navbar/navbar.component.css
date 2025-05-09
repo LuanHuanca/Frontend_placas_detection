@@ -1,13 +1,15 @@
 .navbar {
   background-color: #3a5e75;
-  padding: 1rem 2rem;
+  padding: 0 2rem;
   color: white;
+  height: 80px;
 }
 
 .navbar-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 100%;
 }
 
 .left-section {
@@ -28,7 +30,14 @@
   color: white;
 }
 
+.right-section {
+  margin-left: auto; /* Esto empuja esta sección completamente a la derecha */
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
 .cat-banner {
-  height: 80px;
+  height: 100%;
   object-fit: contain;
 }
