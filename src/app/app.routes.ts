@@ -5,6 +5,7 @@ import { RegistrosComponent } from './pages/registros/registros.component';
 import { CargarVideoComponent } from './pages/cargar-video/cargar-video.component';
 import { DeteccionComponent } from './pages/deteccion/deteccion.component';
 import { ControlCamarasComponent } from './pages/control-camaras/control-camaras.component';
+import { CargarFotoComponent } from './pages/cargar-foto/cargar-foto.component';
 
 export const routes: Routes = [
     { path: '', component: HomeComponent, pathMatch: 'full' },
@@ -15,6 +16,10 @@ export const routes: Routes = [
     {
         path: 'cargar-video',
         component: CargarVideoComponent
+    },
+    {
+        path: 'cargar-foto',
+        component: CargarFotoComponent
     },
     {   path: 'deteccion', 
         component: DeteccionComponent 
