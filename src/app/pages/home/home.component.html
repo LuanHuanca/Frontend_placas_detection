@@ -6,10 +6,13 @@
 
     <div class="action-buttons">
       <div class="action-card" [routerLink]="['/cargar-video']">
-        <ion-icon name="videocam-outline" class="action-icon"></ion-icon>
+        <ion-icon name="play-circle-outline" class="action-icon"></ion-icon>
         <div class="action-label">Cargar video</div>
       </div>
-
+            <div class="action-card" [routerLink]="['/cargar-video']">
+        <ion-icon name="videocam-outline" class="action-icon"></ion-icon>
+        <div class="action-label">Camaras tiempo real</div>
+      </div>
       <div class="action-card" [routerLink]="['/registros']">
         <ion-icon name="grid-outline" class="action-icon"></ion-icon>
         <button class="action-label">Visualizar registros</button>
