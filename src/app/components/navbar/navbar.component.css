@@ -1,0 +1,46 @@
+.navbar {
+  background-color: #325D79; /* Lapis Lazuli */
+  padding: 0 2rem;
+  color: white;
+  height: 80px;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.left-section {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logo {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.icon {
+  font-size: 1.5rem;
+  color: white;
+}
+
+.right-section {
+  display: flex;
+  /*align-items: center;*/
+  justify-content: flex-end;
+  height: 100%;
+}
+
+.cat-banner {
+  height: 100%;
+  max-height: 100px;
+  object-fit: fill;
+
+}

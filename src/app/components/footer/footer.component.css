@@ -1,0 +1,14 @@
+.site-footer {
+  background-color: #9BD7D1; /* Mismo color que el navbar */
+  color: rgb(0, 0, 0);
+  padding: 1.5rem 0;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.copyright {
+  margin: 0;
+  font-size: 0.9rem;
+}

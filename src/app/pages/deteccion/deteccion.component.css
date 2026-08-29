@@ -1,0 +1,105 @@
+.deteccion-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: "Segoe UI", sans-serif;
+  }
+
+  h1 {
+    justify-content: center;
+  }
+  
+  .header {
+    background-color: #2e5b75;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+  }
+  
+  .header-content {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .header .icon {
+    width: 30px;
+  }
+  
+  .mascota {
+    height: 60px;
+  }
+  
+  .cards {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2rem;
+    background-color: white;
+    flex-grow: 1;
+  }
+  
+  .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem;
+  }
+  
+  .card h3 {
+    margin-bottom: 1rem;
+    font-weight: bold;
+  }
+  
+  .placeholder {
+    width: 100px;
+    height: 100px;
+    background-color: #ddd;
+    border-radius: 10px;
+  }
+  
+  .footer {
+    background-color: #a6ded8;
+    text-align: left;
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+  }
+  .navbar {
+  background-color: #3a5e75;
+  padding: 1rem 2rem;
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  height: 60px; /* Establece una altura clara del navbar */
+}
+body {
+  margin: 0;
+  padding-top: 60px; /* Igual o mayor al alto del navbar */
+}
+.back-button-container {
+  margin-left: 1rem;
+  margin-bottom: 1rem;
+}
+
+.back-button {
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  color: #3a5e75;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.back-icon {
+  font-size: 1.5rem;
+  margin-right: 0.3rem;
+}
+

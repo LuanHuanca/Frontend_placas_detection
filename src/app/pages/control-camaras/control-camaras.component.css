@@ -1,0 +1,59 @@
+.camaras-container {
+    padding: 1.5rem;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+  }
+  
+/* BOTÓN FIJO DE AGREGAR CÁMARA */
+.agregar-btn-fijo {
+  position: fixed;
+  bottom: 5rem;
+  right: 0.2rem;
+  background-color: #325D79;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 50px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  cursor: pointer;
+  z-index: 1000;
+}
+  
+  .grid-camaras {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .camara-card {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .camara-video img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+  }
+  
+  .camara-info {
+    padding: 1rem;
+  }
+  
+  .online {
+    color: green;
+    font-weight: bold;
+  }
+  

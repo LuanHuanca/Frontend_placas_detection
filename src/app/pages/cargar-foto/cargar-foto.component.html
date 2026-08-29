@@ -1,0 +1,68 @@
+<app-navbar></app-navbar>
+
+<div class="back-button-container">
+  <button class="back-button" (click)="goHome()">
+    <ion-icon name="arrow-back-outline" class="back-icon"></ion-icon>
+    Regresar
+  </button>
+</div>
+
+<div class="upload-container">
+  <h2>CARGAR MULTIMEDIA</h2>
+
+  <div class="upload-box" *ngIf="!processedImageUrl && !isLoading">
+  <label for="file-upload" class="upload-label">
+    <div class="preview-area">
+      <!-- Imagen previa (ocupa todo el espacio disponible) -->
+      <img *ngIf="previewUrl" 
+           [src]="previewUrl" 
+           alt="Vista previa" 
+           class="image-preview"/>
+
+      <!-- Placeholder cuando no hay imagen -->
+      <div *ngIf="!previewUrl" class="upload-placeholder">
+        <img src="assets/upload-icon.svg" alt="Upload Icon" class="placeholder-icon"/>
+        <p>Da clic aquí para subir tu archivo multimedia</p>
+      </div>
+    </div>
+    <input type="file" id="file-upload" (change)="onFileSelected($event)" accept="image/*" hidden />
+  </label>
+<p *ngIf="file" class="file-name">{{ file.name }}</p>
+
+  <div class="button-group">
+    <button class="cancel-button" (click)="cancel()">Cancelar</button>
+    <button class="upload-button" [disabled]="!file || isLoading" (click)="upload()">Subir</button>
+  </div>
+</div>
+  <!-- Indicador de carga con GIF -->
+  <div *ngIf="isLoading" class="loader">
+    <img src="assets/gato-corriendo.gif" alt="Cargando..." class="loading-gif" width="300">
+    <p>Procesando tu archivo...</p>
+  </div>
+  <!-- Resultados (visible solo con imagen procesada) -->
+  <div *ngIf="processedImageUrl">
+    <!-- Botón para nueva subida -->
+    <button class="new-upload-button" (click)="cancel()">
+      <ion-icon name="cloud-upload-outline"></ion-icon>
+      Subir nueva imagen
+    </button>
+
+    <!-- Imagen procesada -->
+    <div class="preview-container">
+      <h3>Resultado procesado:</h3>
+      <img [src]="processedImageUrl" alt="Imagen procesada" width="800" />
+    </div>
+
+    <!-- Placas detectadas -->
+    <div *ngIf="placas.length > 0" class="placas-container">
+      <h3>Placas detectadas:</h3>
+      <ul>
+        <li *ngFor="let placa of placas">{{ placa }}</li>
+      </ul>
+    </div>
+  </div>
+<br>
+<br>
+<br>
+  <app-footer></app-footer>
+</div>

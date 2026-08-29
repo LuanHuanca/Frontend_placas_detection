@@ -1,0 +1,29 @@
+<div class="home-container">
+  <app-navbar></app-navbar>
+
+  <main class="main-content">
+    <h2 class="welcome-title">Bienvenido al sistema de detección de placas</h2>
+
+    <div class="action-buttons">
+      <div class="action-card" [routerLink]="['/cargar-video']">
+        <ion-icon name="play-circle-outline" class="action-icon"></ion-icon>
+        <div class="action-label">Cargar video</div>
+      </div>
+      <div class="action-card" [routerLink]="['/cargar-foto']">
+        <ion-icon name="camera-outline" class="action-icon"></ion-icon>
+        <div class="action-label">Cargar Foto</div>
+      </div>
+      <div class="action-card" [routerLink]="['/control-camaras']">
+        <ion-icon name="videocam-outline" class="action-icon"></ion-icon>
+        <div class="action-label">Camaras tiempo real</div>
+      </div>
+      <div class="action-card" [routerLink]="['/registros']">
+        <ion-icon name="grid-outline" class="action-icon"></ion-icon>
+        <button class="action-label">Visualizar registros</button>
+      </div>
+    </div>
+
+  </main>
+
+  <app-footer></app-footer>
+</div>

@@ -1,0 +1,35 @@
+<div class="camaras-container">
+  <app-navbar></app-navbar>
+
+  <!-- BOTÓN REGRESAR 
+  <div class="back-button-container">
+    <button class="back-button" (click)="goHome()">
+      <ion-icon name="arrow-back-outline" class="back-icon"></ion-icon>
+      Regresar
+    </button>
+  </div> -->
+
+  <!-- TÍTULO -->
+  <h2>Control de Cámaras</h2>
+
+  <!-- BOTÓN AÑADIR (FLOTANTE) -->
+  <button class="agregar-btn-fijo">➕ Añadir Cámara</button>
+
+  <!-- GRID DE CÁMARAS -->
+  <div class="grid-camaras">
+    <div class="camara-card" *ngFor="let camara of camaras">
+      <div class="camara-video">
+        <img [src]="camara.imagen || 'assets/imagen-camara-central.jpeg'" alt="Vista previa" />
+      </div>
+      <div class="camara-info">
+        <h3>{{ camara.nombre }}</h3>
+        <p><strong>IP:</strong> {{ camara.ip }}</p>
+        <p><strong>Ubicación:</strong> {{ camara.ubicacion }}</p>
+        <p><strong>Estado:</strong> <span [class.online]="camara.estado === 'activa'">{{ camara.estado }}</span></p>
+        <p><strong>Descripción:</strong> {{ camara.descripcion }}</p>
+      </div>
+    </div>
+  </div>
+
+  <app-footer></app-footer>
+</div>
